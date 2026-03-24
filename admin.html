@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Baramati Tourism</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-top">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Admin<span>Panel</span>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-map-marked-alt"></i> Add Tourist Place</a>
+            <a href="#"><i class="fas fa-images"></i> Upload Images</a>
+            <a href="#"><i class="fas fa-hotel"></i> Manage Hotels</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Manage Events</a>
+            <a href="#"><i class="fas fa-users"></i> Manage Users</a>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+
+        <div class="sidebar-user">
+            <div class="user-info">
+                <img src="images/avatar.jpg" alt="Admin" onerror="this.src='https://ui-avatars.com/api/?name=Admin'">
+                <div>
+                    <h4>John Doe</h4>
+                    <p>Super Admin</p>
+                </div>
+            </div>
+            <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <div class="header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search stats, users...">
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn"><i class="far fa-bell"></i><span class="dot"></span></button>
+                <div class="date-now">March 13, 2026</div>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="welcome-banner">
+                <div>
+                    <h1>Welcome Back, Admin!</h1>
+                    <p>Here's what's happening with the Baramati Tourism Portal today.</p>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> New Attraction</button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="icon" style="background: rgba(224, 122, 58, 0.1); color: var(--primary);"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="data">
+                        <p>Total Places</p>
+                        <h3>42</h3>
+                    </div>
+                    <div class="trend up">+5%</div>
+                </div>
+                <div class="stats-card">
+                    <div class="icon" style="background: rgba(26, 141, 141, 0.1); color: var(--secondary);"><i class="fas fa-hotel"></i></div>
+                    <div class="data">
+                        <p>Total Hotels</p>
+                        <h3>18</h3>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="icon" style="background: rgba(240, 192, 64, 0.1); color: var(--accent-dark);"><i class="fas fa-calendar-check"></i></div>
+                    <div class="data">
+                        <p>Active Events</p>
+                        <h3>7</h3>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="icon" style="background: rgba(71, 85, 105, 0.1); color: var(--text-dark);"><i class="fas fa-users"></i></div>
+                    <div class="data">
+                        <p>Visits (Monthly)</p>
+                        <h3>12.5k</h3>
+                    </div>
+                    <div class="trend up">+12%</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Sections -->
+            <div class="dashboard-grid">
+                <!-- Visitors Chart -->
+                <div class="admin-panel chart-panel">
+                    <div class="panel-header">
+                        <h3>Visitor Statistics</h3>
+                        <select>
+                            <option>Last 30 Days</option>
+                            <option>Last 6 Months</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <img src="https://via.placeholder.com/800x300?text=Chart.js+Visualization+Placeholder" alt="Chart Placeholder">
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="admin-panel activities-panel">
+                    <div class="panel-header">
+                        <h3>Recent Activities</h3>
+                        <a href="#">See All</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-plus"></i></div>
+                            <div class="activity-text">
+                                <p><strong>New Place Added:</strong> ISKCON Temple</p>
+                                <span>2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-image"></i></div>
+                            <div class="activity-text">
+                                <p><strong>Images Uploaded:</strong> Bhigwan Sanctuary (x5)</p>
+                                <span>5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-edit"></i></div>
+                            <div class="activity-text">
+                                <p><strong>Event Updated:</strong> Ganesh Festival schedule</p>
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chart.js for real visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

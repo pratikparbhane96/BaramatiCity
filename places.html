@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places in Baramati | Explore Temples, Nature & Heritage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/places.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled"> <!-- Add scrolled class by default for subpages -->
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Baramati<span>Tourism</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="places.html" class="active">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="events.html">Events</a>
+                <a href="map.html">Map</a>
+                <a href="politics.html">Politics</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn"><i class="fas fa-search"></i></button>
+                <a href="login.html" class="nav-login-btn">Sign In</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <header class="page-banner">
+        <img src="images/hero.jpg" alt="Baramati Places">
+        <div class="banner-content">
+            <h1 class="reveal">Tourist Places</h1>
+            <p class="reveal" style="transition-delay: 0.1s;">Discover the hidden gems and popular landmarks of
+                Baramati.</p>
+            <div class="breadcrumb reveal" style="transition-delay: 0.2s;">
+                <a href="index.html">Home</a> <span>/</span> <span>Places</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper reveal">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All Places</button>
+                    <button class="filter-btn" data-filter="temple">Temples</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="culture">Culture</button>
+                    <button class="filter-btn" data-filter="heritage">Heritage</button>
+                </div>
+                <div class="search-filter">
+                    <input type="text" id="placeSearch" placeholder="Search places...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Grid -->
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="grid grid-3" id="placesGrid">
+                <!-- Bhigwan -->
+                <div class="card place-card" data-category="nature">
+                    <div class="card-img-wrapper">
+                        <img src="\images\nature\flamingos_wide.png" alt="Bhigwan Bird Sanctuary" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Nature</span>
+                        <h3>Bhigwan Bird Sanctuary</h3>
+                        <p>Often called the “Bharatpur of Maharashtra,” this sanctuary on the Ujani Dam backwaters hosts
+                            thousands of migratory birds like flamingos, storks, and herons every winter.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Near Baramati</p>
+                            <p><i class="fas fa-clock"></i> Best time: Nov to Mar</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Siddheshwar -->
+                <div class="card place-card" data-category="temple">
+                    <div class="card-img-wrapper">
+                        <img src="\images\temples\siddeshwar.png" alt="Siddheshwar Temple" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Temple</span>
+                        <h3>Siddheshwar Temple</h3>
+                        <p>A revered Shiva temple known for its peaceful atmosphere and traditional architecture. It
+                            remains a spiritual hub, especially vibrant during Mahashivratri.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 2km from Baramati</p>
+                            <p><i class="fas fa-clock"></i> All year round</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+
+                <!-- ISKCON -->
+                <div class="card place-card" data-category="temple">
+                    <div class="card-img-wrapper">
+                        <img src="images/attractions/iskcon.jpg" alt="ISKCON Temple" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Temple</span>
+                        <h3>ISKCON Temple</h3>
+                        <p>Beautiful marble temple dedicated to Lord Krishna, known for its chants and peace.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Baramati City</p>
+                            <p><i class="fas fa-clock"></i> 6:00 AM - 8:00 PM</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Shivsrushti -->
+                <div class="card place-card" data-category="culture">
+                    <div class="card-img-wrapper">
+                        <img src="images/attractions/shivsrushti.jpg" alt="Shivsrushti" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Culture</span>
+                        <h3>Shivsrushti</h3>
+                        <p>Interactive museum showcasing the life and legacy of Chatrapati Shivaji Maharaj.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Near Baramati</p>
+                            <p><i class="fas fa-clock"></i> 10:00 AM - 6:00 PM</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Museum -->
+                <div class="card place-card" data-category="heritage">
+                    <div class="card-img-wrapper">
+                        <img src="images/attractions/museum.jpg" alt="Sharad Pawar Museum" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Heritage</span>
+                        <h3>Sharad Pawar Museum</h3>
+                        <p>A repository of local history, achievements, and the evolution of modern Baramati.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Baramati</p>
+                            <p><i class="fas fa-clock"></i> 9:30 AM - 5:30 PM</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Clock Tower -->
+                <div class="card place-card" data-category="heritage">
+                    <div class="card-img-wrapper">
+                        <img src="images/attractions/clock_tower.jpg" alt="Clock Tower" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Heritage</span>
+                        <h3>Clock Tower</h3>
+                        <p>A recognizable city landmark representing historical charm. The surrounding lively streets
+                            make it a great place to experience the daily life of Baramati.</p>
+                        <div class="card-info">
+                            <p><i class="fas fa-map-marker-alt"></i> City Center</p>
+                            <p><i class="fas fa-clock"></i> Any time</p>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm w-full">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No places found</h3>
+                <p>Try searching for something else or changing the category filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-header-img">
+                    <img src="" alt="" id="modalImg">
+                    <div class="modal-badge" id="modalBadge"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta">
+                        <span id="modalCategory"><i class="fas fa-layer-group"></i> </span>
+                    </div>
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-description">
+                        <p id="modalMainDesc"></p>
+                    </div>
+                    <div class="modal-details-grid">
+                        <div class="detail-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p id="modalLoc"></p>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Best Time</h4>
+                                <p id="modalTime"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-images-gallery">
+                        <div class="gallery-header">
+                            <h3>Gallery</h3>
+                            <button class="btn btn-sm btn-outline" id="uploadBtn">
+                                <i class="fas fa-upload"></i> Share Photos
+                            </button>
+                            <input type="file" id="photoUpload" hidden multiple accept="image/*,video/*">
+                        </div>
+                        <div class="gallery-grid" id="modalGallery">
+                            <!-- Existing photos and new uploads will appear here -->
+                            <div class="photo-placeholder">
+                                <i class="fas fa-camera"></i>
+                                <p>No community photos yet. Be the first to share!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-actions">
+                        <a href="map.html" class="btn btn-outline"><i class="fas fa-map"></i> View on Map</a>
+                        <button class="btn btn-primary">Plan a Trip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                        Baramati<span>Tourism</span>
+                    </div>
+                    <p>Promoting the spiritual, natural, and cultural heritage of Baramati to the world.</p>
+                </div>
+                <!-- ... shorter footer for subpages ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baramati Tourism Portal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/places.js"></script>
+</body>
+
+</html>

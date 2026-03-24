@@ -1,0 +1,179 @@
+/* ============================================
+   BARAMATI TOURISM PORTAL – Login Styles
+   ============================================ */
+
+.login-body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 20px;
+}
+
+.login-body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 40, 56, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.login-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-header .logo {
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.login-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 15px 14px 45px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-main);
+    transition: all var(--transition);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(224, 122, 58, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+}
+
+.form-options .remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.form-options .forgot {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.login-footer p {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+.login-footer a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+}
+
+.divider span {
+    position: relative;
+    background: #fff;
+    padding: 0 15px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.social-login {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.social-btn:hover {
+    background: var(--bg-main);
+    transform: translateY(-2px);
+}

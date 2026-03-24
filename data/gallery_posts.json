@@ -1,0 +1,70 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "type": "image",
+            "src": "images/gallery/1.jpg",
+            "author": "Baramati Tourism",
+            "location": "Bhigwan Bird Sanctuary",
+            "caption": "The majestic flamingos have arrived! 🦩 A sight you don't want to miss this winter.",
+            "date": "2 hours ago",
+            "likes": 124,
+            "comments": 12
+        },
+        {
+            "id": 2,
+            "type": "image",
+            "src": "images/temples/siddeshwar.png",
+            "author": "Baramati Tourism",
+            "location": "Siddheshwar Temple",
+            "caption": "Serenity at its best. The morning vibes at Siddheshwar Temple are magical. ✨",
+            "date": "5 hours ago",
+            "likes": 89,
+            "comments": 5
+        },
+        {
+            "id": 3,
+            "type": "video",
+            "src": "images/videos/baramati background.mp4",
+            "author": "Baramati Tourism",
+            "location": "Baramati City",
+            "caption": "Experience the vibrant heart of Maharashtra. Welcome to Baramati! 🏔️",
+            "date": "1 day ago",
+            "likes": 256,
+            "comments": 42
+        },
+        {
+            "id": 1773931808282,
+            "type": "image",
+            "src": "uploads/1773931808233-jejuri.png",
+            "author": "You",
+            "location": "Baramati, Maharashtra",
+            "caption": "Shared a new moment! #BaramatiTourism",
+            "date": "Just now",
+            "likes": 0,
+            "comments": 0
+        },
+        {
+            "id": 1773931815847,
+            "type": "image",
+            "src": "uploads/1773931815832-mayureshwar.png",
+            "author": "You",
+            "location": "Baramati, Maharashtra",
+            "caption": "Shared a new moment! #BaramatiTourism",
+            "date": "Just now",
+            "likes": 0,
+            "comments": 0
+        },
+        {
+            "id": 1773931834702,
+            "type": "image",
+            "src": "uploads/1773931834686-kharalake.png",
+            "author": "You",
+            "location": "Baramati, Maharashtra",
+            "caption": "Shared a new moment! #BaramatiTourism",
+            "date": "Just now",
+            "likes": 0,
+            "comments": 0
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels & Restaurants in Baramati | Stay & Dine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hotels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Baramati<span>Tourism</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="places.html">Places</a>
+                <a href="hotels.html" class="active">Hotels</a>
+                <a href="events.html">Events</a>
+                <a href="map.html">Map</a>
+                <a href="politics.html">Politics</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn"><i class="fas fa-search"></i></button>
+                <a href="login.html" class="nav-login-btn">Sign In</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <header class="page-banner">
+        <img src="images/hero.jpg" alt="Baramati Hotels">
+        <div class="banner-content">
+            <h1 class="reveal">Hotels & Restaurants</h1>
+            <p class="reveal" style="transition-delay: 0.1s;">Premium stays and delicious dining experiences in Baramati.</p>
+            <div class="breadcrumb reveal" style="transition-delay: 0.2s;">
+                <a href="index.html">Home</a> <span>/</span> <span>Hotels & Dining</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sorting Section -->
+    <section class="sort-section">
+        <div class="container">
+            <div class="sort-wrapper reveal">
+                <div class="sort-controls">
+                    <span>Sort by:</span>
+                    <select id="hotelSort">
+                        <option value="featured">Featured</option>
+                        <option value="rating">Guest Rating</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="distance">Distance from Center</option>
+                    </select>
+                </div>
+                <div class="category-toggle">
+                    <button class="cat-btn active" data-cat="all">All</button>
+                    <button class="cat-btn" data-cat="hotel">Hotels</button>
+                    <button class="cat-btn" data-cat="restaurant">Restaurants</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels Grid -->
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="grid grid-3" id="hotelsGrid">
+                <!-- Data loaded from JSON by hotels.js -->
+                <div class="loading-state">
+                    <p>Loading premium stays...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                        Baramati<span>Tourism</span>
+                    </div>
+                    <p>Promoting the spiritual, natural, and cultural heritage of Baramati to the world.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baramati Tourism Portal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hotels.js"></script>
+</body>
+</html>

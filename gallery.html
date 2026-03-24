@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Baramati Tourism Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-page-padding { padding-bottom: 100px; }
+        .gallery-filters { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap;
+        }
+        .filter-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+        .masonry-gallery { margin-top: 20px; }
+        .gallery-item video { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Baramati<span>Tourism</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="places.html">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="events.html">Events</a>
+                <a href="map.html">Map</a>
+                <a href="politics.html">Politics</a>
+                <a href="gallery.html" class="active">Gallery</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login-btn">Sign In</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <header class="page-banner">
+        <img src="images/hero.jpg" alt="Baramati Gallery">
+        <div class="banner-content">
+            <h1 class="reveal">Photo Gallery</h1>
+            <p class="reveal" style="transition-delay: 0.1s;">A visual journey through the soul of Baramati.</p>
+            <div class="breadcrumb reveal" style="transition-delay: 0.2s;">
+                <a href="index.html">Home</a> <span>/</span> <span>Gallery</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Content -->
+    <section class="section gallery-page-padding">
+        <div class="container">
+            <div class="gallery-filters reveal">
+                <div class="filter-controls">
+                    <button class="btn btn-outline btn-sm active">All</button>
+                    <button class="btn btn-outline btn-sm">Nature</button>
+                    <button class="btn btn-outline btn-sm">Temples</button>
+                    <button class="btn btn-outline btn-sm">Landmarks</button>
+                    <button class="btn btn-outline btn-sm">Festivals</button>
+                </div>
+                <div class="upload-controls">
+                    <button class="btn btn-primary btn-sm" id="galleryUploadBtn">
+                        <i class="fas fa-plus"></i> Add Your Photo
+                    </button>
+                    <input type="file" id="galleryPhotoUpload" hidden multiple accept="image/*,video/*">
+                </div>
+            </div>
+
+            <div class="insta-feed-wrapper reveal">
+                <div id="instaFeed" class="insta-feed">
+                    <!-- Posts loaded from gallery_posts.json -->
+                    <div class="loading-post">
+                        <p>Loading moments...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baramati Tourism Portal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const feedContainer = document.getElementById('instaFeed');
+            const uploadBtn = document.getElementById('galleryUploadBtn');
+            const fileInput = document.getElementById('galleryPhotoUpload');
+            const API_URL = 'http://localhost:3000/api';
+
+            // --- Load Feed ---
+            async function loadFeed() {
+                try {
+                    // Try fetching from server first, fallback to JSON if server is not running
+                    let response;
+                    try {
+                        response = await fetch(`${API_URL}/posts`);
+                        if (!response.ok) throw new Error();
+                    } catch {
+                        response = await fetch('data/gallery_posts.json');
+                    }
+                    const data = await response.json();
+                    renderPosts(data.posts);
+                } catch (error) {
+                    console.error('Error loading gallery:', error);
+                    feedContainer.innerHTML = '<p>Oops! Could not load the gallery moments.</p>';
+                }
+            }
+
+            function renderPosts(posts) {
+                feedContainer.innerHTML = '';
+                // Sort posts by ID (Date.now()) descending to show newest first
+                posts.slice().sort((a, b) => b.id - a.id).forEach(post => {
+                    const postEl = createPostElement(post);
+                    feedContainer.appendChild(postEl);
+                });
+            }
+
+            function createPostElement(post) {
+                const div = document.createElement('div');
+                div.className = 'insta-post reveal revealed';
+                
+                const isVideo = post.type === 'video';
+                
+                div.innerHTML = `
+                    <div class="post-header">
+                        <div class="post-user">
+                            <div class="user-avatar">${post.author.charAt(0)}</div>
+                            <div class="user-info">
+                                <h4>${post.author}</h4>
+                                <p>${post.location}</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="post-media">
+                        ${isVideo ? 
+                            `<video src="${post.src}" loop muted playsinline></video>
+                             <div class="video-overlay"><i class="fas fa-play"></i></div>` : 
+                            `<img src="${post.src}" alt="Post Media">`
+                        }
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn heart-btn"><i class="far fa-heart"></i></button>
+                        <button class="action-btn"><i class="far fa-comment"></i></button>
+                        <button class="action-btn"><i class="far fa-paper-plane"></i></button>
+                    </div>
+                    <div class="post-likes">${post.likes} likes</div>
+                    <div class="post-caption">
+                        <span>${post.author}</span> ${post.caption}
+                        <div class="post-date">${post.date}</div>
+                    </div>
+                `;
+
+                if (isVideo) {
+                    const video = div.querySelector('video');
+                    div.querySelector('.post-media').addEventListener('click', () => {
+                        if (video.paused) {
+                            video.play();
+                            div.querySelector('.video-overlay').style.opacity = '0';
+                        } else {
+                            video.pause();
+                            div.querySelector('.video-overlay').style.opacity = '1';
+                        }
+                    });
+                }
+
+                // Simple Like toggle
+                const heartBtn = div.querySelector('.heart-btn');
+                heartBtn.addEventListener('click', () => {
+                    heartBtn.classList.toggle('active');
+                    const icon = heartBtn.querySelector('i');
+                    icon.classList.toggle('far');
+                    icon.classList.toggle('fas');
+                });
+
+                return div;
+            }
+
+            // --- Upload Logic ---
+            if (uploadBtn && fileInput) {
+                uploadBtn.addEventListener('click', () => fileInput.click());
+
+                fileInput.addEventListener('change', async (e) => {
+                    const files = e.target.files;
+                    if (files.length > 0) {
+                        for (const file of Array.from(files)) {
+                            const formData = new FormData();
+                            formData.append('file', file);
+                            formData.append('author', 'You');
+                            formData.append('location', 'Baramati, Maharashtra');
+                            formData.append('caption', 'Shared a new moment! #BaramatiTourism');
+                            formData.append('type', file.type.startsWith('video/') ? 'video' : 'image');
+
+                            try {
+                                const response = await fetch(`${API_URL}/upload`, {
+                                    method: 'POST',
+                                    body: formData
+                                });
+
+                                if (response.ok) {
+                                    const result = await response.json();
+                                    // Refresh feed to show new post
+                                    loadFeed();
+                                } else {
+                                    alert('Failed to upload file.');
+                                }
+                            } catch (error) {
+                                console.error('Upload error:', error);
+                                alert('Server not running. Run "node server.js" to enable persistent uploads!');
+                            }
+                        }
+                    }
+                });
+            }
+
+            loadFeed();
+        });
+    </script>
+</body>
+</html>

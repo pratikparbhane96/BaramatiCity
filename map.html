@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map of Baramati | Tourism Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/map.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="map-page-body">
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Baramati<span>Tourism</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="places.html">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="events.html">Events</a>
+                <a href="map.html" class="active">Map</a>
+                <a href="politics.html">Politics</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login-btn">Sign In</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Map Container -->
+    <div class="map-layout">
+        <!-- Sidebar -->
+        <aside class="map-sidebar">
+            <div class="sidebar-header">
+                <h2>Explore Locations</h2>
+                <div class="map-search">
+                    <input type="text" placeholder="Search a place...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="map-categories">
+                <button class="m-cat active" data-type="all">All</button>
+                <button class="m-cat" data-type="nature" title="Nature"><i class="fas fa-leaf"></i></button>
+                <button class="m-cat" data-type="spirituality" title="Spirituality"><i class="fas fa-om"></i></button>
+                <button class="m-cat" data-type="accommodation" title="Accommodation"><i
+                        class="fas fa-bed"></i></button>
+                <button class="m-cat" data-type="landmark" title="Landmark"><i class="fas fa-landmark"></i></button>
+            </div>
+
+            <div class="location-list" id="locationList">
+                <!-- Location Item 1 -->
+                <div class="location-item" data-type="nature" data-lat="18.2831" data-lng="74.7864">
+                    <img src="images/attractions/bhigwan.jpg" alt="Bhigwan">
+                    <div class="info">
+                        <h3>Bhigwan Bird Sanctuary</h3>
+                        <p>Wildlife & Nature</p>
+                    </div>
+                </div>
+                <!-- Location Item 2 -->
+                <div class="location-item" data-type="spirituality" data-lat="18.1506" data-lng="74.5771">
+                    <img src="images/temples/siddheshwar.jpg" alt="Siddheshwar">
+                    <div class="info">
+                        <h3>Siddheshwar Temple</h3>
+                        <p>Spirituality</p>
+                    </div>
+                </div>
+                <!-- Location Item 3 -->
+                <div class="location-item" data-type="accommodation" data-lat="18.1707" data-lng="74.5993">
+                    <img src="images/hotels/tathastu.jpg" alt="Tathastu Veg">
+                    <div class="info">
+                        <h3>Tathastu Veg</h3>
+                        <p>Dining & Restaurant</p>
+                    </div>
+                </div>
+                <!-- Location Item 4 -->
+                <div class="location-item" data-type="accommodation" data-lat="18.1566" data-lng="74.5815">
+                    <img src="images/hotels/city_inn.jpg" alt="City Inn">
+                    <div class="info">
+                        <h3>Hotel City Inn</h3>
+                        <p>Accommodation</p>
+                    </div>
+                </div>
+                <!-- Location Item 4 -->
+                <div class="location-item" data-type="landmark" data-lat="18.1550" data-lng="74.5750">
+                    <img src="images/attractions/clock_tower.jpg" alt="Clock Tower">
+                    <div class="info">
+                        <h3>Clock Tower Baramati</h3>
+                        <p>Landmark</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Map View -->
+        <main class="map-view">
+            <div id="map"></div>
+
+            <div class="map-overlay-info" id="mapInfo">
+                <button class="close-info"><i class="fas fa-times"></i></button>
+                <img src="" alt="" id="infoImg">
+                <div class="info-content">
+                    <h3 id="infoTitle"></h3>
+                    <p id="infoType"></p>
+                    <a href="places.html" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

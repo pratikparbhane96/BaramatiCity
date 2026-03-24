@@ -1,0 +1,146 @@
+{
+    "places": [
+        {
+            "id": "bhigwan",
+            "title": "Bhigwan Bird Sanctuary",
+            "category": "nature",
+            "tag": "Famous",
+            "description": "Often called the “Bharatpur of Maharashtra,” this sanctuary on the Ujani Dam backwaters hosts thousands of migratory birds like flamingos, storks, and herons every winter.",
+            "location": "Near Baramati",
+            "time": "Nov to Mar",
+            "image": "images/nature/flamingos_wide.png",
+            "lat": 18.2831,
+            "lng": 74.7864,
+            "gallery": [
+                "images/nature/flamingos_wide.png"
+            ]
+        },
+        {
+            "id": "siddheshwar",
+            "title": "Siddheshwar Temple",
+            "category": "temple",
+            "tag": "Revered",
+            "description": "Siddheshwar Temple is a revered temple dedicated to Lord Shiva in Baramati. The temple is known for its peaceful atmosphere and beautiful traditional architecture. It becomes especially vibrant during Mahashivratri, when many devotees gather for special rituals and celebrations.",
+            "location": "Baramati City",
+            "time": "All year round",
+            "image": "images/temples/siddeshwar.png",
+            "lat": 18.1506,
+            "lng": 74.5771,
+            "gallery": [
+                "images/temples/siddeshwar.png"
+            ]
+        },
+        {
+            "id": "iskcon",
+            "title": "ISKCON Temple",
+            "category": "temple",
+            "tag": "Peaceful",
+            "description": "Beautiful marble temple dedicated to Lord Krishna, known for its spiritual chants and serene environment.",
+            "location": "Baramati City",
+            "time": "6:00 AM - 8:00 PM",
+            "image": "images/attractions/iskcon.jpg",
+            "lat": 18.1600,
+            "lng": 74.5800,
+            "gallery": [
+                "images/attractions/iskcon.jpg"
+            ]
+        },
+        {
+            "id": "shivsrushti",
+            "title": "Shivsrushti",
+            "category": "culture",
+            "tag": "Historical",
+            "description": "Interactive museum showcasing the life and legacy of Chatrapati Shivaji Maharaj through beautiful dioramas and exhibits.",
+            "location": "Near Baramati",
+            "time": "10:00 AM - 6:00 PM",
+            "image": "images/attractions/shivsrushti.jpg",
+            "lat": 18.1700,
+            "lng": 74.5900,
+            "gallery": [
+                "images/attractions/shivsrushti.jpg"
+            ]
+        },
+        {
+            "id": "museum",
+            "title": "Sharad Pawar Museum",
+            "category": "heritage",
+            "tag": "Modern",
+            "description": "A repository of local history, achievements, and the evolution of modern Baramati through various phases of development.",
+            "location": "Baramati",
+            "time": "9:30 AM - 5:30 PM",
+            "image": "images/attractions/museum.jpg",
+            "lat": 18.1500,
+            "lng": 74.5700,
+            "gallery": [
+                "images/attractions/museum.jpg"
+            ]
+        },
+        {
+            "id": "clock-tower",
+            "title": "Clock Tower Baramati",
+            "category": "heritage",
+            "tag": "Landmark",
+            "description": "The Clock Tower is one of the recognizable landmarks in Baramati. Located in a busy area of the city, it represents the town’s historical charm.",
+            "location": "City Center, Baramati",
+            "time": "Daily (24/7)",
+            "image": "images/attractions/clock_tower.jpg",
+            "lat": 18.1550,
+            "lng": 74.5750,
+            "gallery": [
+                "images/attractions/clock_tower.jpg"
+            ]
+        }
+    ],
+    "hotels": [
+        {
+            "id": "tathastu",
+            "title": "Tathastu Veg",
+            "category": "restaurant",
+            "rating": 4.8,
+            "price": 3500,
+            "image": "images/hotels/tathastu.jpg",
+            "description": "Authentic vegetarian cuisine at Club Chowk, Baramati Bhigwan Road, Inamdar Nagar.",
+            "location": "Club Chowk, Baramati Bhigwan Road",
+            "lat": 18.1707,
+            "lng": 74.5993,
+            "distance": 0.5,
+            "phone": "+91 1234567890"
+        },
+        {
+            "id": "city-inn",
+            "title": "Hotel City Inn",
+            "category": "hotel",
+            "rating": 4.5,
+            "price": 4200,
+            "image": "images/hotels/city_inn.jpg",
+            "description": "A comfortable and convenient hotel providing modern amenities for both tourists and business travelers.",
+            "location": "Patuas Road",
+            "distance": 1.2,
+            "phone": "+91 0987654321"
+        }
+    ],
+    "events": [
+        {
+            "id": "ganesh-festival",
+            "title": "Ganesh Festival",
+            "date": "15 Sep 2026",
+            "category": "Religious",
+            "location": "Baramati City",
+            "time": "All Day",
+            "image": "images/events/ganesh_festival.jpg",
+            "description": "Witness the grand celebrations and artistic Ganpurti idols throughout the city.",
+            "status": "Annual"
+        },
+        {
+            "id": "agriculture-expo",
+            "title": "Krishik Expo",
+            "date": "20 Jan 2026",
+            "category": "Agriculture",
+            "location": "KVK Baramati",
+            "time": "9:00 AM - 6:00 PM",
+            "image": "images/events/agriculture_expo.jpg",
+            "description": "One of India's largest agriculture exhibitions showcasing modern farming technologies.",
+            "status": "Upcoming"
+        }
+    ]
+}

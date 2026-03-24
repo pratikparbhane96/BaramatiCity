@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Baramati – The Hidden Gem of Maharashtra | Tourism Portal</title>
+    <meta name="description"
+        content="Explore the beautiful temples, nature, culture, and heritage of Baramati, Maharashtra. Plan your visit to Bhigwan Bird Sanctuary, Siddheshwar Temple, and more.">
+
+    <!-- Design System & Shared Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Home Page Specific Styles -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Exploring Baramati...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                Baramati<span>Tourism</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="places.html">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="events.html">Events</a>
+                <a href="map.html">Map</a>
+                <a href="politics.html">Politics</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-search-btn"><i class="fas fa-search"></i></button>
+                <a href="login.html" class="nav-login-btn">Sign In</a>
+            </div>
+
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="events.html">Events</a>
+        <a href="map.html">Map</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="login.html" style="margin-top: 20px; color: var(--primary);">Sign In</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <video autoplay loop muted playsinline id="hero-video">
+                <source src="images/videos/baramati background.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="reveal">Discover Baramati – <br><span>The Hidden Gem of Maharashtra</span></h1>
+            <p class="reveal" style="transition-delay: 0.2s;">Explore temples, nature, culture and heritage in the heart
+                of Maharashtra.</p>
+
+            <div class="hero-actions reveal" style="transition-delay: 0.4s;">
+                <a href="places.html" class="btn btn-primary">Explore Places <i class="fas fa-arrow-right"></i></a>
+                <a href="#visit" class="btn btn-secondary">Plan Your Visit</a>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Top Tourist Attractions -->
+    <section class="section" id="attractions">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Must Visit</span>
+                <h2>Top Tourist Attractions</h2>
+                <p>From serene bird sanctuaries to historical landmarks, discover the best of Baramati.</p>
+            </div>
+
+            <div class="grid grid-3 reveal-stagger">
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Temples -->
+    <section class="section bg-light" id="temples">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Spiritual Journey</span>
+                <h2>Popular Temples</h2>
+                <p>Baramati is home to several ancient and spiritually significant temples.</p>
+            </div>
+
+            <div id="popularTemples" class="temple-grid reveal-stagger">
+                <!-- Data loaded from JSON -->
+            </div>
+            <!-- Temple Card 1 -->
+            <div class="card card-horizontal">
+                <img src="\images\temples\siddeshwar.png" alt="Siddheshwar Temple">
+                <div class="card-body">
+                    <span class="tag tag-teal">Ancient</span>
+                    <h3>Shri Siddheshwar Temple</h3>
+                    <p>A revered temple dedicated to Lord Shiva, known for its peaceful atmosphere, beautiful
+                        traditional architecture, and vibrant Mahashivratri celebrations.</p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-road"></i> 2 km from center</span>
+                    </div>
+                    <a href="places.html" class="btn btn-primary btn-sm">Visit Now</a>
+                </div>
+            </div>
+
+            <!-- Temple Card 2 -->
+            <div class="card card-horizontal">
+                <img src="\images\temples\mayureshwar.png" alt="Mayureshwar Temple">
+                <div class="card-body">
+                    <span class="tag tag-teal">Ashtavinayak</span>
+                    <h3>Mayureshwar Temple</h3>
+                    <p>One of the famous Ashtavinayak temples of Lord Ganesha, located in Morgaon near Baramati.</p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-road"></i> 35 km from Baramati</span>
+                    </div>
+                    <a href="places.html" class="btn btn-primary btn-sm">Visit Now</a>
+                </div>
+            </div>
+
+            <!-- Temple Card 3 -->
+            <div class="card card-horizontal">
+                <img src="\images\temples\jejuri.png" alt="Khandoba Temple">
+                <div class="card-body">
+                    <span class="tag tag-teal">Historical</span>
+                    <h3>Khandoba Temple</h3>
+                    <p>A significant pilgrimage site dedicated to Lord Khandoba, featuring traditional architecture.</p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-road"></i> 15 km from Baramati</span>
+                    </div>
+                    <a href="places.html" class="btn btn-primary btn-sm">Visit Now</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Nature & Lakes -->
+    <section class="section" id="nature">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Nature & Peace</span>
+                <h2>Nature & Lakes</h2>
+                <p>Reconnect with nature through Baramati's beautiful landscapes and water bodies.</p>
+            </div>
+
+            <div class="wide-feature-grid">
+                <div class="wide-feature reveal-left">
+                    <img src="\images\nature\flamingos_wide.png" alt="Flamingos at Bhigwan">
+                    <div class="content">
+                        <h3>Bhigwan Bird Sanctuary</h3>
+                        <p>Often called the “Bharatpur of Maharashtra,” this sanctuary on the Ujani Dam backwaters hosts
+                            thousands of migratory birds like flamingos, storks, and herons every winter.</p>
+                        <div style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8;">
+                            <span style="margin-right: 15px;"><i class="fas fa-map-marker-alt"></i> Near Baramati</span>
+                            <span><i class="fas fa-clock"></i> Best time: Nov to Mar</span>
+                        </div>
+                        <a href="places.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="wide-feature reveal-right">
+                    <img src="\images\nature\kharalake.png" alt="Karha River">
+                    <div class="content">
+                        <h3>Karha River Banks</h3>
+                        <p>The lifeline of Baramati, providing fertile lands and peaceful riverside spots for locals and
+                            tourists alike.</p>
+                        <a href="places.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Hotels -->
+    <section class="section bg-light" id="hotels">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Stay & Dine</span>
+                <h2>Featured Hotels & Restaurants</h2>
+                <p>Premium accommodation and authentic local cuisine for a comfortable stay.</p>
+            </div>
+
+            <div class="grid grid-4 reveal-stagger">
+                <!-- Hotel Card 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/hotels/tathastu.jpg" alt="Tathastu Veg" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>Tathastu Veg</h3>
+                        <p>Authentic vegetarian cuisine at Club Chowk, Baramati.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-phone"></i> +91 1234567890</span>
+                        </div>
+                        <a href="hotels.html" class="btn btn-outline btn-sm w-full">Visit Now</a>
+                    </div>
+                </div>
+
+                <!-- Hotel Card 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/hotels/city_inn.jpg" alt="Hotel City Inn" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <h3>Hotel City Inn</h3>
+                        <p>A comfortable and convenient hotel providing modern amenities for both tourists and business
+                            travelers.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-phone"></i> +91 0987654321</span>
+                        </div>
+                        <a href="hotels.html" class="btn btn-outline btn-sm w-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Hotel Card 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/hotels/leelas.jpg" alt="Hotel Leelas Garden" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3>Hotel Leelas Garden</h3>
+                        <p>Surrounded by greenery, perfect for families.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-phone"></i> +91 1122334455</span>
+                        </div>
+                        <a href="hotels.html" class="btn btn-outline btn-sm w-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Hotel Card 4 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/hotels/leaf.jpg" alt="The Leaf Restaurant" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>The Leaf</h3>
+                        <p>Multicuisine restaurant with premium dining.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-phone"></i> +91 5544332211</span>
+                        </div>
+                        <a href="hotels.html" class="btn btn-outline btn-sm w-full">Visit Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="section" id="events">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Culture & Festivals</span>
+                <h2>Upcoming Events</h2>
+                <p>Experience the vibrant culture and traditions of Baramati through its events.</p>
+            </div>
+
+            <div class="grid grid-3 reveal-stagger">
+                <!-- Event Card 1 -->
+                <div class="card event-card">
+                    <div class="date-badge">15 <span>Sep</span></div>
+                    <img src="images/events/ganesh_festival.jpg" alt="Ganesh Festival" class="card-img">
+                    <div class="card-body">
+                        <h3>Ganesh Festival</h3>
+                        <p>Witness the grand celebrations and artistic Ganpurti idols throughout the city.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Baramati City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="card event-card">
+                    <div class="date-badge">10 <span>Nov</span></div>
+                    <img src="\images\events\kvk.png" alt="Cultural Fair" class="card-img">
+                    <div class="card-body">
+                        <h3>Cultural Fair</h3>
+                        <p>Explore local crafts, traditional food, and folk performances at the annual fair.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Agricultural Ground</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="card event-card">
+                    <div class="date-badge">20 <span>Jan</span></div>
+                    <img src="images/events/bird_festival.jpg" alt="Bird Festival" class="card-img">
+                    <div class="card-body">
+                        <h3>Bird Festival</h3>
+                        <p>Special tours and photo exhibitions at Bhigwan for bird lovers and scientists.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Bhigwan Sanctuary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Visual Tour</span>
+                <h2>Photo Gallery</h2>
+                <p>A glimpse into the beauty and vibrancy of Baramati.</p>
+            </div>
+
+            <div class="masonry-gallery reveal">
+                <div class="gallery-item"><img src="images/gallery/1.jpg" alt="Flamingos"></div>
+                <div class="gallery-item Tall"><img src="images/gallery/2.jpg" alt="Siddheshwar Temple"></div>
+                <div class="gallery-item Wide"><img src="images/gallery/3.jpg" alt="Sunset Lake"></div>
+                <div class="gallery-item"><img src="images/gallery/4.jpg" alt="City View"></div>
+                <div class="gallery-item"><img src="images/gallery/5.jpg" alt="Heritage Landmark"></div>
+                <div class="gallery-item Tall"><img src="images/gallery/6.jpg" alt="Festival Celebration"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-mountain"></i></div>
+                        Baramati<span>Tourism</span>
+                    </div>
+                    <p>Promoting the spiritual, natural, and cultural heritage of Baramati to the world. Your ultimate
+                        guide to exploring the hidden gem of Maharashtra.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="places.html">Tourist Places</a>
+                    <a href="hotels.html">Hotels & Dining</a>
+                    <a href="events.html">Events & Culture</a>
+                    <a href="gallery.html">Photo Gallery</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="#">Temples</a>
+                    <a href="#">Nature & Lakes</a>
+                    <a href="#">Heritage Sites</a>
+                    <a href="#">Travel Info</a>
+                    <a href="map.html">Interactive Map</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@baramatitourism.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 2112 123456</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Administrative Building, Baramati, Maharashtra 413102</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baramati Tourism Portal. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span style="margin: 0 10px;">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Shared & Home JS -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script>
+        // Home page specific interactivity (if any)
+    </script>
+</body>
+
+</html>
